@@ -17,7 +17,7 @@ func main() {
 	ctx, cancel := context.WithTimeout(context.Background(),300*time.Millisecond)
 	defer cancel()
 
-	req, err := http.NewRequestWithContext(ctx, "GET", "http://localhost:8080/cotacao", nil)
+	req, err := http.NewRequestWithContext(ctx, "GET", "http://127.0.0.1:8080/cotacao", nil)
 	if err != nil {
 		log.Fatalf("Erro ao criar a requisição: %v", err)
 	}
